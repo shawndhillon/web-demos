@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Demo: Creature pop-up</title>
+
+	<link rel="shortcut icon" href="./img/slug.ico"/> 
+
+  	<meta charset="UTF-8" />
+
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/lab.css">
+
+	<script src="js/lab.js" DEFER></script>
+	
+</head>
+<body>
+
+	<main id="content">
+		<section>
+			<h1>Demo Creature pop-up</h1>
+
+            <button onclick="openPopup()">Open Popup</button>
+
+            <div id="popup1" class="overlay">
+                <div class="popup-box">
+                <img class="photo" src="./img/mo_shellshock.png" alt="creature" />
+                <button class="close-btn" onclick="openPopup2()"> Exiting will destroy the creature, are you sure? </button>
+                </div>
+            </div>
+
+            <div id="popup2" class="overlay">
+                <div class="popup-box">
+                <img class="photo" src="./img/mo_box.png" alt="creature" />
+
+                <p>Please Have Mercy!</p>
+                <button class="close-btn" onclick="closeAll()"> Click to devastate the creature, you are a horrible person </button>
+                </div>
+            </div>
+
+		</section>
+	</main>
+</div>
+</body>
+</html>
