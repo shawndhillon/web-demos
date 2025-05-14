@@ -37,3 +37,8 @@
   max-height: 300px;
   border-radius: 25px;
 }
+
+.links{
+  position: fixed;
+  bottom: 0;
+}
