@@ -1,0 +1,154 @@
+/* we can use a single css file to style all the files in our wwebsite */
+
+/* you can pick your own background colors, text colors, and fonts */
+
+/* we can select an html element tag, in this case "body" will apply to the whole document */
+body {
+  /* background-color: #50808E; */
+  background-color: #282A36; 
+  font-family: monospace;
+}
+
+/* we can have rules apply to multiple elements at the same time with commas */
+h1,h2,h3 {
+  font-family: Monaco, monospace;
+  color: white ;
+  text-shadow: -1px 0 rgba(0, 0, 0, 0.35), 0 1px rgba(0, 0, 0, 0.35), 1px 0 rgba(0, 0, 0, 0.35), 0 -1px rgba(0, 0, 0, 0.35);
+}
+
+/* and we can have rules that overlap other rules, both take effect */
+h1 {
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  font-size: 200%;
+}
+
+/* the hashtag in a CSS selector selects an element by id, e.g., id="content" */
+#content {
+  flex: 1;
+  margin: 10px;
+  padding: 10px;
+  background-color: #6272A4;
+  border-radius: 15px;
+  overflow-y: auto;
+}
+
+/* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
+.minor-section {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #44475A; 
+  color: white;
+  border-radius: 15px;
+  border: solid 1px #BD93F9;
+}
+
+.code-section {
+  border: 3px solid #BD93F9;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: #282A36;
+  
+}
+
+.code-preview { 
+  max-height: 500px;
+  border-radius: 10px;
+  padding-bottom: 10px;
+
+}
+
+
+
+.photo-section {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  width: 100%;
+ 
+  align-items: flex-end;
+  padding-bottom: 1em;
+
+}
+
+.photo-section img {
+  height: 400px;      
+  width: auto;       
+  flex-grow: 0;      
+  min-width: 0;
+  border-radius: 15px;
+}
+
+
+.page-wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 225px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+}
+
+.link-container {
+  flex: 1;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px 10px;
+}
+
+/* Link section styles */
+.link-section {
+  display: block;
+  cursor: pointer;
+  background-color: #44475A;
+  border: 2px solid #BD93F9;
+  padding: 2px;
+  color: #8BE9FD;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.link-section a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.link-section img {
+  display: block;
+  margin: auto;
+}
+
+.link-section p {
+  margin: 0;
+  padding: 5px;
+  color: white;
+}
+
+.link-section:hover {
+  border-radius: 35px;
+  background-color: #282A36;
+  border-color: #FF79C6;
+  transform: scale(1.1);
+}
+
+.link-section:hover p {
+  color: #FF79C6;
+  text-shadow: -1px 0 rgba(0, 0, 0, 0.35), 0 1px rgba(0, 0, 0, 0.35), 1px 0 rgba(0, 0, 0, 0.35), 0 -1px rgba(0, 0, 0, 0.35);
+}
+
+p {
+  font-size: 150%;
+}
+
+#output {
+  margin-top: 1em;
+}
+

@@ -1,0 +1,46 @@
+/* this css file will only style the homepage of our site */
+
+/* Photo styles */
+.cat-photo {
+  margin: 10px;
+  max-width: 500px;
+}
+
+.pet-photo {
+  max-width: 500px;
+  max-height: 500px;
+  border: 3px solid #BD93F9;
+  border-radius: 25px;
+  margin-inline: 2%;
+}
+
+.photo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #44475A; 
+  border-radius: 15px;
+}
+
+
+p {
+  font-size: 150%;
+}
+
+.link-photo {
+  max-width: 500px;
+  max-height: 500px;
+  border: 3px solid #BD93F9;
+  border-radius: 25px;
+  margin-inline: 2%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.link-photo:hover {
+  border-color: #FF79C6;
+  transform: scale(1.05);
+}
+
+
