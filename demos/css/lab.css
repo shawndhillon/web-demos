@@ -11,6 +11,8 @@
 }
 
 .random-popup-box {
+  display: none;
+  
   position: fixed;
   background: white;
   padding: 20px;
