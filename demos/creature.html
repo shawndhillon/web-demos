@@ -23,23 +23,23 @@
 		<section>
 			<h1>Demo Creature Pop-up</h1>
 
-            <button onclick="openPopup()">Open Popup</button>
+            <button onclick="openRandomPopup()">Open Popup</button>
 
-            <div id="popup1" class="overlay">
-                <div class="popup-box">
+            <div id="overlay" class="overlay">
+          
+            <div id="popup" class="random-popup-box">
                 <img class="photo" src="./img/mo_shellshock.png" alt="creature" />
                 <button class="close-btn" onclick="openPopup2()"> Exiting will destroy the creature, are you sure? </button>
-                </div>
             </div>
 
-            <div id="popup2" class="overlay">
-                <div class="popup-box">
+           
+            <div id="popup2" class="random-popup-box" style="display: none;">
                 <img class="photo" src="./img/mo_box.png" alt="creature" />
-
                 <p>Please Have Mercy!</p>
                 <button class="close-btn" onclick="closeAll()"> Click to smite the creature and return. </button>
-                </div>
             </div>
+            </div>
+
 
             <div class ="links"> 
                 <a href="https://shawndhillon.github.io/web-demos/">Home</a>
