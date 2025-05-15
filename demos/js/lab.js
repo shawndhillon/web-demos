@@ -14,18 +14,33 @@ function openPopup2() {
   popup2.style.display = "block";
 }
 
+
 function closeAll() {
   const popup = document.getElementById("popup");
+  const popup2 = document.getElementById("popup2");
+  const overlay = document.getElementById("overlay");
+
   if (popup) {
     popup.style.display = "none";
   }
 
-  const popup2 = document.getElementById("popup2");
   if (popup2) {
-    popup2.style.display = "none";
+   
+    $(popup2).fadeOut(1700);
+
+    setTimeout(() => {
+      overlay.style.display = "none";
+    }, 1700);
+    
+    const sound = new Audio('sounds/smited.mov'); 
+    sound.play();
+
+    //popup2.style.display = "none";
+
+    return;
   }
 
-  const overlay = document.getElementById("overlay");
+  
   if (overlay) {
     overlay.style.display = "none";
   }
