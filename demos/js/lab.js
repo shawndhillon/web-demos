@@ -26,17 +26,16 @@ function closeAll() {
 
   if (popup2) {
    
-    $(popup2).fadeOut(1700);
+    $(popup2).fadeOut(2300);
 
     setTimeout(() => {
       overlay.style.display = "none";
-    }, 1700);
+    }, 2300);
     
     const sound = new Audio('sounds/smited.mov'); 
     sound.play();
 
     //popup2.style.display = "none";
-
     return;
   }
 
