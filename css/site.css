@@ -86,7 +86,7 @@ h1 {
 }
 
 .sidebar {
-  width: 225px;
+  width: 5000px;
   display: flex;
   flex-direction: column;
   height: 100vh; 
@@ -136,7 +136,7 @@ h1 {
   border-radius: 35px;
   background-color: #282A36;
   border-color: #FF79C6;
-  transform: scale(1.1);
+  transform: scale(1.01);
 }
 
 .link-section:hover p {

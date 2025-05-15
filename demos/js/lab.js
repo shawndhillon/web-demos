@@ -13,6 +13,8 @@ function closeAll() {
 }
 
 
+
+
 // click listener for button
 $("#captcha").click(function(){
 
