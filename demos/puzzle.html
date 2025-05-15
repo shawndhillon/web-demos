@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Demo: Puzzle</title>
+
+	<link rel="shortcut icon" href="./img/slug.ico"/> 
+
+  	<meta charset="UTF-8" />
+
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/lab.css">
+
+	<script src="js/lab.js" DEFER></script>
+	
+</head>
+<body>
+
+	<main id="content">
+		<section>
+			<h1>Demo: puzzle</h1>
+
+
+			 <button onclick="openRandomPopup()">Open Popup</button>
+
+<div id="overlay" class="overlay">
+	<div id="popup" class="random-popup-box">
+    <p>Place peices in box</p>
+  <div id="puzzle-container">
+    <div class="piece" data-index="0"></div>
+    <div class="piece" data-index="1"></div>
+
+    
+
+    <div class="target-zone" id="targetZone"></div>
+  </div>
+
+  <button id="finalCloseBtn" class="close-btn" style="display: none;" onclick="closeAll()">
+    Exit
+  </button>
+</div>
+</div>
+
+
+    
+
+
+            <div class ="links"> 
+                <a href="https://shawndhillon.github.io/web-demos/">Home</a>
+            </div>
+
+		</section>
+	</main>
+</div>
+</body>
+</html>

@@ -50,5 +50,34 @@
 
 
 
+#puzzle-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+
+.piece {
+  position: absolute;
+  width: 95px;
+  height: 45px;
+  background-color: rgb(255, 119, 0);
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: grab;
+  user-select: none;
+}
+
+.target-zone {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  top: 100px;
+  left: 50px;
+  border: 2px solid #000000;
+  background-color: rgba(200, 150, 150, 0.3);
+}
+
+
 
 

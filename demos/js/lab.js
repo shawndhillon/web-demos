@@ -104,3 +104,60 @@ document.addEventListener("mousemove", function(e) {
 
     btn.style.transform = `scale(${scale})`;
 });
+
+
+// ------------------------------------------------------
+
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  const pieces = document.querySelectorAll('.piece');
+  const target = document.getElementById('targetZone');
+  const finalBtn = document.getElementById('finalCloseBtn');
+  let placedCount = 0;
+
+  pieces.forEach((piece, index) => {
+    piece.style.left = `${Math.random() * 500}px`;
+    piece.style.top = `${Math.random() * 250}px`;
+
+    piece.onmousedown = (e) => {
+      const offsetX = e.clientX - piece.offsetLeft;
+      const offsetY = e.clientY - piece.offsetTop;
+
+      const onMove = (e) => {
+        piece.style.left = `${e.clientX - offsetX}px`;
+        piece.style.top = `${e.clientY - offsetY}px`;
+      };
+
+      const onUp = () => {
+        document.removeEventListener('mousemove', onMove);
+        document.removeEventListener('mouseup', onUp);
+
+        const p = piece.getBoundingClientRect();
+        const t = target.getBoundingClientRect();
+
+        const inside = (
+          p.left >= t.left && p.right <= t.right &&
+          p.top >= t.top && p.bottom <= t.bottom
+        );
+
+        if (inside) {
+      
+          placedCount++;
+          if (placedCount === pieces.length) {
+            finalBtn.style.display = 'block';
+          }
+
+        }
+      };
+
+      document.addEventListener('mousemove', onMove);
+      document.addEventListener('mouseup', onUp);
+    };
+  });
+});
+
+
+
+
+
