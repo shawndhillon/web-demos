@@ -80,3 +80,27 @@ $("#captcha").click(function(){
 });
 
 
+document.addEventListener("mousemove", function(e) {
+    const btn = document.getElementById("closeBtn");
+    
+
+    const rect = btn.getBoundingClientRect();
+    const btnCenterX = rect.left + rect.width / 2;
+    const btnCenterY = rect.top + rect.height / 2;
+
+    const dx = e.clientX - btnCenterX;
+    const dy = e.clientY - btnCenterY;
+
+    const distance = Math.sqrt(dx * dx + dy * dy);
+
+    const minScale = 0.25;
+    const maxScale = 1.5;
+    const threshold = 500; 
+
+    let scale = maxScale;
+    if (distance < threshold) {
+        scale = minScale + ((distance / threshold) * (maxScale - minScale));
+    }
+
+    btn.style.transform = `scale(${scale})`;
+});
